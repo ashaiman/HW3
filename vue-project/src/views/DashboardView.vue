@@ -1,11 +1,30 @@
 <script setup>
 import { ref } from 'vue'
 import TaskForm from '../components/TaskForm.vue'
+import TaskItem from '../components/TaskItem.vue'
 
 const tasks = ref([])
 
 function addTask(task) {
-  tasks.value.push(task)
+  const newTask = {
+    id: Date.now(),
+    title: task.title,
+    priority: task.priority,
+    category: task.category,
+    completed: false,
+  }
+  tasks.value.push(newTask)
+}
+
+function toggleTask(id) {
+  const task = tasks.value.find((task) => task.id === id)
+  if (task) {
+    task.completed = !task.completed
+  }
+}
+
+function deleteTask(id) {
+  tasks.value = tasks.value.filter((task) => task.id !== id)
 }
 </script>
 
@@ -19,9 +38,13 @@ function addTask(task) {
     <h2>Tasks</h2>
 
     <ul>
-      <li v-for="task in tasks" :key="task.title">
-        {{ task.title }} - {{ task.priority }} - {{ task.category }}
-      </li>
+      <TaskItem
+        v-for="task in tasks"
+        :key="task.id"
+        :task="task"
+        @toggle-task="toggleTask"
+        @delete-task="deleteTask"
+      />
     </ul>
   </section>
 </template>
@@ -29,6 +52,10 @@ function addTask(task) {
 <style scoped>
 section {
   padding: 2rem;
+}
+
+ul {
+  padding: 0;
 }
 
 h1 {
