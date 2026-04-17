@@ -35,7 +35,10 @@ const emit = defineEmits(['toggle-task', 'delete-task'])
 
 <style scoped>
 .task-item {
-  border: 1px solid #ddd;
+  background: #ffffff;
+  border: 1px solid #c9b3ea;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(92, 55, 145, 0.08);
   padding: 1rem;
   margin-bottom: 0.75rem;
   list-style: none;
@@ -43,10 +46,15 @@ const emit = defineEmits(['toggle-task', 'delete-task'])
 
 .completed {
   text-decoration: line-through;
-  color: gray;
+  color: #8b76ad;
 }
 
 button {
+  background: #7c3aed;
+  border: 0;
+  border-radius: 8px;
+  color: white;
   cursor: pointer;
+  padding: 0.5rem 0.8rem;
 }
 </style>

@@ -1,50 +1,33 @@
-# vue-project
+# Task Management Dashboard
 
-This template should help get you started developing with Vue 3 in Vite.
+This is a Vue 3 task management dashboard for creating, completing, deleting, filtering, and searching tasks. Tasks are saved in localStorage so they stay after refreshing the page.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Add tasks with a title, priority, and category.
+- Mark tasks complete with a strike-through style.
+- Delete tasks from the list.
+- Filter by All, Active, and Completed.
+- Search by title, priority, or category.
+- View total, active, and completed task stats.
+- Navigate between the Dashboard page and About page with Vue Router.
 
-## Recommended Browser Setup
+## How to Run
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
+Install dependencies:
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Start the development server:
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Build the project:
 
 ```sh
 npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```

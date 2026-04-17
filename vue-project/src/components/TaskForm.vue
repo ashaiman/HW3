@@ -55,9 +55,14 @@ function submitTask() {
 
 <style scoped>
 form {
+  background: #ffffff;
+  border: 1px solid #c9b3ea;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(92, 55, 145, 0.1);
   display: grid;
   gap: 1rem;
   max-width: 400px;
+  padding: 1rem;
 }
 
 label {
@@ -69,11 +74,15 @@ label {
 input,
 select,
 button {
+  border: 1px solid #c9b3ea;
+  border-radius: 8px;
   padding: 0.7rem;
   font: inherit;
 }
 
 button {
+  background: #5b21b6;
+  color: white;
   cursor: pointer;
 }
 </style>
